@@ -1,0 +1,273 @@
+body {
+  background-color: #ebf2f2;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#container{
+  background-color: #ced3d6;
+  left: 0;
+  max-width: 55%;
+  min-height: 93%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+header {
+  text-align: center;
+  color: #ffffff;
+  background-color: #25B99A;
+  height: 80px;
+  padding: 2px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+footer {
+  bottom: 0px;
+  position: absolute;
+  padding: 15px 0;
+  z-index: 5;
+  height: 60px;
+  float:right;
+	min-width:100%;
+  text-align: center;
+  background-color: #25B99A;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+footer input{
+  width: 93%; /* this should be 100%, but i will figure it out later */
+  height: 50px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border:0px;
+  box-shadow:none;
+  outline: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+}
+
+/* Targeting the pseudo element placeholder */
+footer input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+footer input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+footer input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+footer input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+footer button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 45px;
+  color: #25B99A;
+  cursor: pointer;
+  vertical-align: middle;
+  z-index: 2;
+  border-radius: 25px;
+  background-color: #ffffff;
+  border:0px;
+  box-shadow:none;
+  outline: none;
+  /*Removing the default browsers styling of the button */
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+}
+
+#todo, #done {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 30%;
+}
+
+#listDoneItems_counter{
+  width: 100%;
+  padding: 5px;
+  position: relative;
+  float: left;
+  color: #a4a9a9;
+  font-size: 0.7em;
+  text-align: center;
+  display: block;
+  bottom: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul.todoItems {
+  width: 100%;
+  float:left;
+}
+
+/* deviding line betweeen Todo Items and Completed Items */
+ul.todoItems#listDoneItems:before {
+  content: '';
+  width: 95%;
+  height: 1px;
+  top: 0px;
+  background: #bcc1c1;
+  position: absolute;
+  margin: 0 auto;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul.todoItems li {
+  width: 100%;
+  height: 50px;
+  float: left;
+   /* padding: 10px 100px 10px 10px; 100px on padding right to accomadate buttons */
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(44,62,80, 0.2);
+  color: #333333;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 14px 100 14px 14px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul.todoItems li:last-of-type{
+  margin-bottom: 0px;
+}
+
+ul.todoItems li .itemButtons{
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top:0;
+  right:0;
+
+}
+
+ul.todoItems li .itemButtons button{
+width: 50px;
+height: 50px;
+float: left;
+position: relative;
+font-size: 30px;
+vertical-align: middle;
+color: #d3d9d9;
+background-color: #ffffff;
+cursor: pointer;
+border:0px;
+box-shadow:none;
+outline: none;
+/*Removing the default browsers styling of the button */
+-webkit-appearance: none;
+-moz-appearance:   none;
+appearance:        none;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+ul.todoItems li .itemButtons button:last-of-type:before{
+  content: "";
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background:#edf0f1;
+}
+
+ul.todoItems#listTodoItems:empty:after {
+  content: "You didn't plan anything yet!";
+  margin: 15px 0 0 0;
+}
+
+ul.todoItems#listDoneItems:empty:after {
+  content: 'You have yet to complete any tasks.';
+  margin: 15px 0 0 0;
+}
+
+ul.todoItems#listTodoItems:after,
+ul.todoItems#listDoneItems:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #a4a9a9;
+}
+
+
+ul.todoItems li .itemButtons button .remove:hover{
+  color: #eb5656;
+}
+ul.todoItems li .itemButtons button .complete:hover:before{
+  color: #25B99A;
+  content: "\f058";
+}
+ul.todoItems:not(#listTodoItems) li .itemButtons button .complete:before{
+  color: #25B99A;
+  content: "\f058";
+}
+
+@media only screen and (max-width: 768px) {
+    #container{
+    max-width: 100%;
+    margin: 10px;
+  }
+}
